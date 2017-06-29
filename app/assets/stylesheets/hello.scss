@@ -1,0 +1,95 @@
+// Place all the styles related to the Hello controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1{
+    text-align: center;
+    text-size: 30px;
+    text-color: white;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px; 
+	/* width and height can be anything, as long as they're equal */
+}
+
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+/* Spinning, gradient circle; CSS only! */
+#advanced {
+	
+	width: 150px;
+	height: 150px;
+	
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 100%, blue 100%, red 100%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow 10%, white);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 100%, blue 100%, red 100%);
+	
+	
+	animation-name: spin; 
+	animation-duration: 3s; /* 3 seconds */
+	animation-iteration-count: infinite; 
+	animation-timing-function: linear;
+}
+
+#star-five {
+   margin: 50px 0;
+   position: relative;
+   display: block;
+   color: green;
+   text-color: black;
+   width: 0px;
+   height: 0px;
+   border-right:  100px solid transparent;
+   border-bottom: 70px  solid red;
+   border-left:   100px solid transparent;
+   -moz-transform:    rotate(35deg);
+   -webkit-transform: rotate(35deg);
+   -ms-transform:     rotate(35deg);
+   -o-transform:      rotate(35deg);
+   
+   	animation-name: spin; 
+	animation-duration: 3s; /* 3 seconds */
+	animation-iteration-count: infinite; 
+	animation-timing-function: linear;
+
+}
+#star-five:before {
+   border-bottom: 80px solid red;
+   border-left: 30px solid transparent;
+   border-right: 30px solid transparent;
+   position: absolute;
+   height: 0;
+   width: 0;
+   top: -45px;
+   left: -65px;
+   display: block;
+   content: '';
+   -webkit-transform: rotate(-35deg);
+   -moz-transform:    rotate(-35deg);
+   -ms-transform:     rotate(-35deg);
+   -o-transform:      rotate(-35deg);
+
+}
+#star-five:after {
+   position: absolute;
+   display: block;
+   color: red;
+   top: 3px;
+   left: -105px;
+   width: 0px;
+   height: 0px;
+   border-right: 100px solid transparent;
+   border-bottom: 70px solid red;
+   border-left: 100px solid transparent;
+   -webkit-transform: rotate(-70deg);
+   -moz-transform:    rotate(-70deg);
+   -ms-transform:     rotate(-70deg);
+   -o-transform:      rotate(-70deg);
+   content: '';
+}

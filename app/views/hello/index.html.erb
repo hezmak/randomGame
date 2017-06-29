@@ -1,0 +1,25 @@
+<!-- <%= form_tag('/new') do %>
+    <input type="text" name="id">
+    <input type="submit" value="보내기"> -->
+<% end %>
+
+<br>
+<h1>오늘의 당첨번호는?<h1>
+<br><br>
+<div class = "container">
+    <% @lotto.each do |number| %>
+    
+<div class = "circle" id = "circle" style ="float: left">
+        <h1 style="text-center">
+            <br>
+            <%= number%>
+            </h1>
+        </div>
+    <% end %>
+    
+    
+</div>
+
+<br>
+
+<button type="button" class="btn btn-secondary"><a href="javascript:location.reload()">다시뽑기</a></button>
